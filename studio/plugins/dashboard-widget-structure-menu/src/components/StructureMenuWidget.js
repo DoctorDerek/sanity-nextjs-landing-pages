@@ -18,7 +18,7 @@ function StructureMenuWidget(props) {
       </div>
 
       <div className={styles.content}>
-        {props.structure.items.map(item => {
+        {props.structure.items.map((item) => {
           const Icon = getIconComponent(item)
           return (
             <div key={item.id}>

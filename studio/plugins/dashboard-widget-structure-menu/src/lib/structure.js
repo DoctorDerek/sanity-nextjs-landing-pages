@@ -45,7 +45,7 @@ export function serializeStructure(item, context, resolverArgs = []) {
   // Promise/observable returning a function, builder or plain JSON structure
   if (isSubscribable(item)) {
     return observableFrom(item).pipe(
-      mergeMap(val => serializeStructure(val, context, resolverArgs))
+      mergeMap((val) => serializeStructure(val, context, resolverArgs))
     )
   }
 
@@ -63,7 +63,7 @@ export function getDefaultStructure() {
   return StructureBuilder.list()
     .id("__root__")
     .title("Content")
-    .showIcons(items.some(item => item.getSchemaType().icon))
+    .showIcons(items.some((item) => item.getSchemaType().icon))
     .items(items)
 }
 
