@@ -38,6 +38,7 @@ export default createSchema({
     imageSection,
     internalLink,
     link,
+    logo,
     mailchimp,
     page,
     portableText,
